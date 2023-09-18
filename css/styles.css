@@ -1,0 +1,98 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.nav {
+    width: 50%;
+    margin-left: auto;
+}
+
+.nav li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.logo {
+    width: 23%;
+    padding: 1%;
+    text-align: center;
+}
+
+/* Hero Section Styles */
+.heroImg {
+    height: 600px;
+    padding: 25px;
+}
+
+/* Main Content Styles */
+.content {
+    width: 500px;
+    margin: 0 auto;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #373738;
+    padding: 20px;
+}
+
+/* Skills Section Styles */
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+}
+
+.skill {
+    width: 33%;
+    text-align: center;
+    border: 1px solid rgb(52, 52, 116);
+    padding: 10px;
+}
+
+/* Work Section Styles */
+.workGrid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "Questline VFWRework";
+}
+
+.project {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+}
+
+.project:nth-child(1) {
+    grid-area: Questline;
+}
+
+.project:nth-child(2) {
+    grid-area: VFW rework;
+}
+
+/* Mobile Media Query */
+@media screen and (max-width: 600px) {
+    /* Flex Container for Mobile */
+    .flexContainer {
+        flex-direction: column;
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+    .workGrid {
+        grid-template-areas: 
+            "Questline"
+            "VFWRework";
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+    }
+}
